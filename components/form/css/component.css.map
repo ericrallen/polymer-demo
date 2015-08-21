@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "component.css",
+	"sources": [
+		"scss/component.scss"
+	],
+	"sourcesContent": [],
+	"mappings": "",
+	"names": []
+}

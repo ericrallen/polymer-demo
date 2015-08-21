@@ -1,0 +1,46 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="component-form">
+
+    <link rel="import" type="css" href="css/component.css" />
+
+    <template>
+        <p>Hello, <span>[[user.first]]</span> <span>[[user.last]]</span><span>[[message]]</span></p>
+        <form class="form">
+            <h2>[[title]]</h2>
+            <label for="first">
+                First Name<br />
+                <input type="text" id="first" name="first"  value="{{user.first::input}}" />
+            </label>
+            <label for="last">
+                Last Name<br />
+                <input type="text" id="last" name="last" value="{{user.last::input}}" />
+            </label>
+            <ul class="form-options">
+                <h4>Gender</h3>
+                <template is="dom-repeat" items="{{genders}}">
+                    <li>
+                        <label for$="{{item.id}}">
+                            <input type="radio" id$="{{item.id}}" name="gender" value$="{{item.id}}" on-change="setGender" />&nbsp;
+                            <span class="form-option-label">{{item.value}}</span>
+                        </label>
+                    </li>
+                </template>
+            </ul>
+            <ul class="form-options">
+                <h4>Classification</h3>
+                <template is="dom-repeat" items="{{classifications}}">
+                    <li>
+                        <label for$="{{item.id}}">
+                            <input type="checkbox" id$="{{item.id}}" name="classification[]" value$="{{item.id}}" on-change="setClassification" />&nbsp;
+                            <span class="form-option-label">{{item.value}}</span>
+                        </label>
+                    </li>
+                </template>
+            </ul>
+        </form>
+    </template>
+
+</dom-module>
+
+<script src="js/component.js"></script>

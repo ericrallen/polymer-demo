@@ -1,0 +1,28 @@
+
+    @import '_config.scss';
+
+    :host {
+        display: block;
+        box-sizing: border-box;
+
+        * {
+            box-sizing: inherit;
+        }
+    }
+
+    .page-header {
+        background: $header-bg-color;
+        width: 100%;
+        padding: 20px;
+        margin: 0 0 40px 0;
+    }
+
+    .page-header-heading {
+        margin: 0;
+        padding: 0;
+        color: $header-text-color;
+    }
+
+    p {
+        color: #00ff22;
+    }

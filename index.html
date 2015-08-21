@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Polymer Demo</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+
+        <script>
+            window.Polymer = window.Polymer || {};
+            window.Polymer.dom = 'shadow'; //remove this to use Shady DOM which creates a Local DOM scope for each component
+        </script>
+
+        <link rel="import" href="components/header/component-header.html">
+        <link rel="import" href="components/form/component-form.html">
+    </head>
+    <body>
+        <component-header title="Test Polymer Page"></component-header>
+        <component-form title="Who Are You?"></component-form>
+    </body>
+</html>
